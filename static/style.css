@@ -1,0 +1,67 @@
+/* Global typography */
+body {
+  background-color: #f4f3ed;
+  color: #111316;
+  font-family: 'DM Sans', sans-serif;
+  overflow-x: hidden;
+  cursor: default;
+}
+
+h1, h2, h3, h4, .font-heading {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+/* Editorial emphasis style: strictly non-italic with thick lime underline */
+em {
+  font-style: normal;
+  text-decoration: underline;
+  text-decoration-color: #c8e52b;
+  text-decoration-thickness: 10px;
+  text-underline-offset: 6px;
+}
+
+/* Custom mouse cursor follower */
+#custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 14px;
+  height: 14px;
+  background-color: #c8e52b;
+  border-radius: 9999px;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: transform 0.08s ease-out, width 0.2s, height 0.2s, background-color 0.2s;
+  mix-blend-mode: difference;
+}
+
+/* Hover underline expansion for navigation */
+.nav-link {
+  position: relative;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #c8e52b;
+  transition: width 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.nav-link:hover::after,
+.nav-link.nav-active::after {
+  width: 100%;
+}
+
+/* Scroll reveal transitions */
+.reveal-element {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal-element.is-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}

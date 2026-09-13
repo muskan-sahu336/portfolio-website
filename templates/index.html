@@ -1,0 +1,480 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title class="">Muskan Sahu — Software &amp; Systems | B.Tech CSE</title>
+
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet">
+
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            paper: '#f4f3ed',
+            ink: '#111316',
+            muted: '#55585a',
+            'muted-dark': '#8b8e92',
+            lime: '#c8e52b',
+            hairline: 'rgba(17, 19, 22, 0.18)',
+            'hairline-dark': '#33363a'
+          },
+          fontFamily: {
+            heading: ['"Space Grotesk"', 'sans-serif'],
+            body: ['"DM Sans"', 'sans-serif']
+          },
+          letterSpacing: {
+            tighter: '-0.05em',
+            tightest: '-0.07em',
+            meta: '0.22em'
+          }
+        }
+      }
+    };
+  </script>
+
+<link href="{{ url_for('static', filename='styles.css') }}" rel="stylesheet">
+</head>
+<body class="selection:bg-lime selection:text-ink antialiased">
+
+<div aria-hidden="true" id="custom-cursor" style="left: 1270px; top: 2893px; transform: translate(-50%, -50%) scale(1); background-color: rgb(200, 229, 43);"></div>
+
+<header class="sticky top-0 z-50 bg-[#f4f3ed]/90 backdrop-blur-md border-b border-hairline py-4 md:py-5 transition-all">
+<div class="w-[calc(100%-2rem)] md:w-[calc(100%-112px)] max-w-[1536px] mx-auto flex flex-col md:flex-row md:items-center justify-between gap-4">
+
+<div class="flex items-center justify-between">
+<a class="text-xs md:text-sm font-bold tracking-meta uppercase font-heading text-ink hover:text-ink/80 transition-colors" href="#hero">MUSKAN SAHU <span class="text-muted font-normal mx-1">—</span> SOFTWARE &amp; SYSTEMS</a>
+
+<div class="flex md:hidden items-center gap-2 text-[10px] font-bold tracking-meta uppercase bg-ink/5 px-2.5 py-1 rounded-full"><span class="w-1.5 h-1.5 rounded-full bg-lime animate-pulse"></span><span class="">OPEN TO OPPORTUNITIES</span></div>
+</div>
+
+<nav class="flex items-center justify-between md:justify-end gap-6 md:gap-8 text-xs font-bold tracking-meta uppercase">
+<a class="nav-link text-ink hover:text-ink" href="#about">ABOUT</a>
+<a class="nav-link text-ink hover:text-ink" href="#capabilities">SKILLS</a>
+<a class="nav-link text-ink hover:text-ink" href="#projects">PROJECTS</a>
+<a class="nav-link text-ink hover:text-ink" href="#experience">EDUCATION</a>
+<a class="nav-link text-ink hover:text-ink" href="#achievements">ACHIEVEMENTS</a>
+<a class="nav-link text-ink hover:text-ink" href="#contact">CONTACT</a>
+
+<div class="hidden lg:flex items-center gap-2 pl-4 border-l border-hairline text-[11px] font-bold tracking-meta text-ink"><span class="w-2 h-2 rounded-full bg-lime animate-ping"></span><span class="-ml-3.5 w-2 h-2 rounded-full bg-lime"></span><span class="">OPEN TO LEARNING &amp; OPPORTUNITIES</span></div>
+</nav>
+</div>
+</header>
+
+<main class="w-[calc(100%-2rem)] md:w-[calc(100%-112px)] max-w-[1536px] mx-auto">
+
+<section class="py-12 md:py-20 lg:py-24 border-b border-hairline reveal-element is-revealed" id="hero">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-stretch">
+
+<div class="lg:col-span-5 flex flex-col justify-between"><div class="">
+<div class="flex items-center gap-3 text-xs font-bold tracking-meta uppercase text-muted mb-6 md:mb-8">
+<span class="">[ 01 / PORTFOLIO — 2026 ]</span>
+<span class="h-px bg-hairline flex-1"></span>
+</div>
+<h1 class="text-4xl sm:text-6xl md:text-7xl lg:text-[76px] font-bold tracking-tightest leading-[0.92] uppercase mb-8">
+BUILDING THINGS WITH <em>LOGIC</em>. LEARNING WITH PURPOSE.
+</h1>
+<p class="text-muted text-base md:text-lg leading-relaxed max-w-lg mb-8 md:mb-12 font-normal">
+Computer Science engineering student focused on software development, problem solving and building practical digital products.
+</p>
+</div>
+<div class="flex flex-wrap items-center gap-4 pt-4 border-t border-hairline">
+<a class="px-6 py-4 bg-ink text-paper text-xs font-bold tracking-meta uppercase hover:bg-ink/90 transition-all flex items-center gap-2 group" href="#projects">
+<span class="">EXPLORE MY WORK</span>
+<span class="group-hover:translate-y-0.5 transition-transform">↓</span>
+</a>
+<a class="px-6 py-4 border border-ink text-ink text-xs font-bold tracking-meta uppercase hover:bg-lime hover:border-lime transition-all flex items-center gap-2 group" href="{{ url_for('static', filename='resume.pdf') }}" target="_blank" rel="noopener noreferrer">
+<span class="">VIEW RESUME</span>
+<span class="group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-transform">↗</span>
+</a>
+</div></div>
+
+<div class="lg:col-span-4 flex items-center justify-center relative my-8 lg:my-0">
+<div class="relative w-full max-w-[380px] aspect-[3/4] flex items-end justify-center">
+
+<div aria-hidden="true" class="absolute -top-3 -right-3 w-56 h-56 md:w-64 md:h-64 rounded-full bg-lime z-0"></div>
+<div aria-hidden="true" class="absolute -top-7 -right-7 w-64 h-64 md:w-72 md:h-72 rounded-full border border-ink/30 z-0"></div>
+
+<span class="absolute top-2 left-2 font-mono text-xs text-ink/60 select-none">+</span>
+<span class="absolute top-2 right-2 font-mono text-xs text-ink/60 select-none">+</span>
+<span class="absolute bottom-2 left-2 font-mono text-xs text-ink/60 select-none">+</span>
+<span class="absolute bottom-2 right-2 font-mono text-xs text-ink/60 select-none">+</span>
+
+<div class="relative z-10 w-full h-full overflow-hidden border border-ink/20 shadow-sm bg-transparent flex items-end justify-center">
+<img alt="Portrait of Muskan Sahu" class="w-full h-full object-contain object-bottom filter grayscale contrast-105 hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAh2nO24G4mBlelqSsSyi58icSqA3W5JfprzTD-libvp_gIiloRbN4-2cvYiAmDCDjrAQGATCYRaJCquxEJUIG0eeZxFid9HaYxqP9RbQ_jGs4-v4B_2vDeOW3OWZCmILB-BNdSixSZwQVtU3qtPjWoMYH5zwUjFSbzskVxVVzXIA7gTgN_p4qYJcn8eqof8fNm67yDzEpG8g2S6UQOl_SzWrRgE9rP8Dx4dB7Ol2dzlJJuuobS3TiCjgDGvN6i38FxqTo">
+</div>
+</div>
+</div>
+
+<div class="lg:col-span-3 flex flex-col justify-between border-t lg:border-t-0 lg:border-l border-hairline lg:pl-8 pt-8 lg:pt-0 gap-6"><div class="pb-6 border-b border-hairline">
+<span class="block text-[11px] font-bold tracking-meta uppercase text-muted mb-2">CURRENTLY</span>
+<p class="font-heading font-semibold text-lg text-ink leading-snug">4th Year B.Tech CSE Student</p>
+<p class="text-sm text-muted mt-1">@ KDK College of Engineering, Nagpur</p>
+</div>
+<div class="pb-6 border-b border-hairline">
+<span class="block text-[11px] font-bold tracking-meta uppercase text-muted mb-2">CORE FOCUS</span>
+<ul class="space-y-1.5 text-sm font-medium text-ink">
+<li class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 bg-lime"></span>
+<span class="">01 Java / Python / DSA</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 bg-lime"></span>
+<span class="">02 SQL / Cloud Computing</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 bg-lime"></span>
+<span class="">03 Full Stack Development</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 bg-lime"></span>
+<span class="">04 Blockchain &amp; Web3</span>
+</li>
+</ul>
+</div>
+<div class="">
+<span class="block text-[11px] font-bold tracking-meta uppercase text-muted mb-2">STATUS</span>
+<div class="space-y-2 text-xs font-mono uppercase text-ink">
+<div class="flex justify-between py-1 border-b border-hairline/60">
+<span class="text-muted">STATUS</span>
+<span class="font-bold text-ink">OPEN TO OPPORTUNITIES</span>
+</div>
+<div class="flex justify-between py-1 border-b border-hairline/60">
+<span class="text-muted">LOCATION</span>
+<span class="font-bold">NAGPUR, INDIA</span>
+</div>
+<div class="flex justify-between py-1">
+<span class="text-muted">SYMPOSIUM</span>
+<span class="font-bold">SPARK-2026</span>
+</div>
+</div>
+</div></div>
+</div>
+</section>
+
+<section class="py-16 md:py-24 border-b border-hairline reveal-element is-revealed" id="about">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
+
+<div class="lg:col-span-3">
+<div class="sticky top-28"><span class="text-3xl md:text-4xl font-heading font-bold text-ink/25 block mb-2">01</span>
+<h2 class="text-xs font-bold tracking-meta uppercase text-ink">[ 01 // ABOUT ]</h2>
+<p class="text-xs tracking-wider uppercase text-muted mt-1">PHILOSOPHY &amp; APPROACH</p>
+<p class="text-[11px] font-mono tracking-tight text-ink/60 mt-3 pt-3 border-t border-hairline">A developer in progress, by design.</p></div>
+</div>
+
+<div class="lg:col-span-9 space-y-12"><p class="text-2xl sm:text-4xl lg:text-5xl font-heading font-semibold tracking-tight leading-tight text-ink">
+I like understanding how things work — then turning that understanding into <em>something useful</em>.
+</p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-muted text-base leading-relaxed">
+<p class="">
+I'm a Computer Science engineering student building my foundation across programming, data structures, databases, cloud computing and full-stack development. I enjoy breaking a problem into smaller pieces, learning the underlying logic, and then building a working solution.
+</p>
+<p class="">
+Alongside academics, I'm developing industry exposure through internships, cloud learning and hands-on technical work. My current goal is to become a strong software developer who can contribute to real products rather than simply write code that works in isolation.
+</p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-3 border-t border-b border-hairline py-8 gap-8">
+<div class="border-b sm:border-b-0 sm:border-r border-hairline pb-6 sm:pb-0 pr-4">
+<span class="block font-heading text-5xl md:text-6xl font-bold tracking-tightest text-ink mb-1">4th Year</span>
+<span class="text-xs font-bold tracking-meta uppercase text-muted">B.Tech CSE Candidate</span>
+</div>
+<div class="border-b sm:border-b-0 sm:border-r border-hairline pb-6 sm:pb-0 pr-4">
+<span class="block font-heading text-5xl md:text-6xl font-bold tracking-tightest text-ink mb-1">3+</span>
+<span class="text-xs font-bold tracking-meta uppercase text-muted">Featured Systems &amp; Projects</span>
+</div>
+<div>
+<span class="block font-heading text-5xl md:text-6xl font-bold tracking-tightest text-ink mb-1">100%</span>
+<span class="text-xs font-bold tracking-meta uppercase text-muted">Focused on Scalable Logic &amp; Core CS</span>
+</div>
+</div></div>
+</div>
+</section>
+
+<section class="py-16 md:py-24 border-b border-hairline reveal-element is-revealed" id="capabilities">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
+
+<div class="lg:col-span-3">
+<div class="sticky top-28">
+<span class="text-3xl md:text-4xl font-heading font-bold text-ink/25 block mb-2">02</span>
+<h2 class="text-xs font-bold tracking-meta uppercase text-ink">[ 02 // CAPABILITIES ]</h2>
+<p class="text-xs tracking-wider uppercase text-muted mt-1">CORE DISCIPLINE &amp; SKILLS</p>
+</div>
+</div>
+
+<div class="lg:col-span-9">
+<div class="grid grid-cols-1 md:grid-cols-2 border-t border-l border-hairline"><div class="border-r border-b border-hairline p-8 lg:p-10 flex flex-col justify-between hover:bg-white/50 transition-colors group">
+<div>
+<span class="text-xs font-mono text-muted group-hover:text-ink transition-colors">[ 01 ]</span>
+<h3 class="text-xl font-heading font-bold uppercase mt-4 mb-3 tracking-tight">PROGRAMMING</h3>
+<p class="text-muted text-sm leading-relaxed mb-6">
+Rigorous foundation in algorithm design, object-oriented concepts, and computational problem solving.
+</p>
+</div>
+<ul class="text-xs font-mono uppercase space-y-2 text-ink/80 pt-4 border-t border-hairline/50">
+<li class="">• Java &amp; Python</li>
+<li class="">• Data Structures &amp; Algorithms</li>
+<li class="">• Object-Oriented Programming (OOP)</li>
+</ul>
+</div>
+<div class="border-r border-b border-hairline p-8 lg:p-10 flex flex-col justify-between hover:bg-white/50 transition-colors group">
+<div>
+<span class="text-xs font-mono text-muted group-hover:text-ink transition-colors">[ 02 ]</span>
+<h3 class="text-xl font-heading font-bold uppercase mt-4 mb-3 tracking-tight">WEB DEVELOPMENT</h3>
+<p class="text-muted text-sm leading-relaxed mb-6">
+Constructing responsive, modern web applications connecting structured frontend interfaces with backend logic.
+</p>
+</div>
+<ul class="text-xs font-mono uppercase space-y-2 text-ink/80 pt-4 border-t border-hairline/50">
+<li class="">• HTML5 / CSS3 / JavaScript</li>
+<li class="">• Full Stack Web Applications</li>
+<li class="">• REST APIs &amp; Frontend Integration</li>
+</ul>
+</div>
+<div class="border-r border-b border-hairline p-8 lg:p-10 flex flex-col justify-between hover:bg-white/50 transition-colors group">
+<div>
+<span class="text-xs font-mono text-muted group-hover:text-ink transition-colors">[ 03 ]</span>
+<h3 class="text-xl font-heading font-bold uppercase mt-4 mb-3 tracking-tight">DATA &amp; DATABASE</h3>
+<p class="text-muted text-sm leading-relaxed mb-6">
+Designing reliable data schemas, relational database architectures, and high-integrity transactional queries.
+</p>
+</div>
+<ul class="text-xs font-mono uppercase space-y-2 text-ink/80 pt-4 border-t border-hairline/50">
+<li class="">• SQL &amp; MySQL Management</li>
+<li class="">• Relational Database Concepts</li>
+<li class="">• Schema Design &amp; Data Handling</li>
+</ul>
+</div>
+<div class="border-r border-b border-hairline p-8 lg:p-10 flex flex-col justify-between hover:bg-white/50 transition-colors group">
+<div>
+<span class="text-xs font-mono text-muted group-hover:text-ink transition-colors">[ 04 ]</span>
+<h3 class="text-xl font-heading font-bold uppercase mt-4 mb-3 tracking-tight">CLOUD &amp; SECURITY</h3>
+<p class="text-muted text-sm leading-relaxed mb-6">
+Understanding cloud architectures, virtualized infrastructure fundamentals, and network protection practices.
+</p>
+</div>
+<ul class="text-xs font-mono uppercase space-y-2 text-ink/80 pt-4 border-t border-hairline/50">
+<li class="">• AWS Cloud Fundamentals</li>
+<li class="">• Cloud Infrastructure &amp; Deployment</li>
+<li class="">• Network &amp; Systems Security</li>
+</ul>
+</div></div>
+</div>
+</div>
+</section>
+
+<section class="py-16 md:py-24 border-b border-hairline reveal-element is-revealed" id="projects">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
+
+<div class="lg:col-span-3">
+<div class="sticky top-28">
+<span class="text-3xl md:text-4xl font-heading font-bold text-ink/25 block mb-2">03</span>
+<h2 class="text-xs font-bold tracking-meta uppercase text-ink">[ 03 // SELECTED WORK ]</h2>
+<p class="text-xs tracking-wider uppercase text-muted mt-1">CASE STUDIES &amp; SYSTEMS</p>
+</div>
+</div>
+
+<div class="lg:col-span-9">
+<div class="border-t border-hairline">
+{% for project in projects %}
+<article class="border-b border-hairline py-8 md:py-10 transition-colors duration-300 hover:bg-lime/20 -mx-4 px-4 sm:-mx-6 sm:px-6 rounded-sm group cursor-pointer">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 mb-3">
+<div class="flex items-center gap-4 text-xs font-mono text-muted">
+<span class="">{{ project.year }}</span>
+<span class="">•</span>
+<span class="">{{ project.category }}</span>
+<span class="">•</span>
+<span class="bg-ink text-paper px-2 py-0.5 text-[10px] font-bold tracking-widest uppercase">{{ project.tech_stack }}</span>
+</div>
+</div>
+<h3 class="text-2xl sm:text-4xl font-heading font-bold uppercase tracking-tight text-ink group-hover:text-ink">
+{{ project.title }}
+</h3>
+<p class="text-muted text-sm sm:text-base mt-2 max-w-2xl leading-relaxed">
+{{ project.description }}
+</p>
+</article>
+{% endfor %}
+</div>
+</div>
+</div>
+</section>
+
+<section class="py-16 md:py-24 border-b border-hairline reveal-element is-revealed" id="experience">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
+
+<div class="lg:col-span-3">
+<div class="sticky top-28">
+<span class="text-3xl md:text-4xl font-heading font-bold text-ink/25 block mb-2">04</span>
+<h2 class="text-xs font-bold tracking-meta uppercase text-ink">[ 04 // EDUCATION ]</h2>
+<p class="text-xs tracking-wider uppercase text-muted mt-1">ACADEMIC BACKGROUND</p>
+</div>
+</div>
+
+<div class="lg:col-span-9">
+<div class="border-t border-hairline"><div class="py-6 sm:py-8 border-b border-hairline flex flex-col sm:flex-row sm:items-baseline justify-between gap-2 sm:gap-6">
+<span class="text-xs font-mono font-bold tracking-widest text-muted sm:w-44 shrink-0">2023 — PRESENT</span>
+<div class="flex-1">
+<h3 class="text-xl sm:text-2xl font-heading font-bold uppercase text-ink">B.Tech in Computer Science Engineering</h3>
+<p class="text-sm text-muted mt-1">KDK College of Engineering — Nagpur, India</p>
+</div>
+<span class="text-xs font-mono uppercase text-muted sm:text-right">UNDERGRADUATE</span>
+</div>
+<div class="py-6 sm:py-8 border-b border-hairline flex flex-col sm:flex-row sm:items-baseline justify-between gap-2 sm:gap-6">
+<span class="text-xs font-mono font-bold tracking-widest text-muted sm:w-44 shrink-0">COURSEWORK</span>
+<div class="flex-1">
+<h3 class="text-xl sm:text-2xl font-heading font-bold uppercase text-ink">Data Structures &amp; Software Development</h3>
+<p class="text-sm text-muted mt-1">Studied relevant coursework in data structures, algorithms and full stack development</p>
+</div>
+<span class="text-xs font-mono uppercase text-muted sm:text-right">CORE SUBJECTS</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="py-16 md:py-24 border-b border-hairline reveal-element is-revealed" id="achievements">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
+<!-- Left Label Column -->
+<div class="lg:col-span-3">
+<div class="sticky top-28">
+<span class="text-3xl md:text-4xl font-heading font-bold text-ink/25 block mb-2">05</span>
+<h2 class="text-xs font-bold tracking-meta uppercase text-ink">[ 05 // ACHIEVEMENTS ]</h2>
+<p class="text-xs tracking-wider uppercase text-muted mt-1">CERTIFICATIONS &amp; RECOGNITION</p>
+</div>
+</div>
+
+<div class="lg:col-span-9">
+<div class="border-t border-hairline">
+<div class="py-6 sm:py-8 border-b border-hairline flex flex-col sm:flex-row sm:items-baseline justify-between gap-2 sm:gap-6">
+<span class="text-xs font-mono font-bold tracking-widest text-muted sm:w-44 shrink-0">CERTIFICATION</span>
+<div class="flex-1">
+<h3 class="text-xl sm:text-2xl font-heading font-bold uppercase text-ink">Python Programming</h3>
+<p class="text-sm text-muted mt-1">Completed certification covering core Python and applied programming fundamentals</p>
+</div>
+<span class="text-xs font-mono uppercase text-muted sm:text-right">LANGUAGE</span>
+</div>
+<div class="py-6 sm:py-8 border-b border-hairline flex flex-col sm:flex-row sm:items-baseline justify-between gap-2 sm:gap-6">
+<span class="text-xs font-mono font-bold tracking-widest text-muted sm:w-44 shrink-0">CERTIFICATION</span>
+<div class="flex-1">
+<h3 class="text-xl sm:text-2xl font-heading font-bold uppercase text-ink">Data Structures &amp; Algorithms</h3>
+<p class="text-sm text-muted mt-1">Certified in DSA — problem solving, algorithmic thinking and complexity analysis</p>
+</div>
+<span class="text-xs font-mono uppercase text-muted sm:text-right">CORE CS</span>
+</div>
+<div class="py-6 sm:py-8 border-b border-hairline flex flex-col sm:flex-row sm:items-baseline justify-between gap-2 sm:gap-6">
+<span class="text-xs font-mono font-bold tracking-widest text-muted sm:w-44 shrink-0">CERTIFICATION</span>
+<div class="flex-1">
+<h3 class="text-xl sm:text-2xl font-heading font-bold uppercase text-ink">Web Development</h3>
+<p class="text-sm text-muted mt-1">Certified in full stack web development — front-end and back-end fundamentals</p>
+</div>
+<span class="text-xs font-mono uppercase text-muted sm:text-right">FULL STACK</span>
+</div>
+<div class="py-6 sm:py-8 border-b border-hairline flex flex-col sm:flex-row sm:items-baseline justify-between gap-2 sm:gap-6">
+<span class="text-xs font-mono font-bold tracking-widest text-muted sm:w-44 shrink-0">INTERNSHIP</span>
+<div class="flex-1">
+<h3 class="text-xl sm:text-2xl font-heading font-bold uppercase text-ink">Fortinet Internship</h3>
+<p class="text-sm text-muted mt-1">Completed cybersecurity-focused internship program with Fortinet</p>
+</div>
+<span class="text-xs font-mono uppercase text-muted sm:text-right">CYBERSECURITY</span>
+</div>
+<div class="py-6 sm:py-8 border-b border-hairline flex flex-col sm:flex-row sm:items-baseline justify-between gap-2 sm:gap-6">
+<span class="text-xs font-mono font-bold tracking-widest text-muted sm:w-44 shrink-0">PUBLICATION</span>
+<div class="flex-1">
+<h3 class="text-xl sm:text-2xl font-heading font-bold uppercase text-ink">SPARK-2026 Paper Publication</h3>
+<p class="text-sm text-muted mt-1">Published paper and presented the AI-driven 'Clip Curator' platform with a 7-member team at the SPARK-2026 National Symposium</p>
+</div>
+<span class="text-xs font-mono uppercase text-muted sm:text-right">RESEARCH</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+</main>
+<footer class="w-full bg-[#111316] text-paper mt-20 pt-20 md:pt-32 pb-16 border-t border-hairline-dark" id="contact">
+<div class="w-[calc(100%-2rem)] md:w-[calc(100%-112px)] max-w-[1536px] mx-auto"><div class="flex items-center gap-3 text-xs font-bold tracking-meta uppercase text-muted-dark mb-8">
+<span class="">[ 06 // CONTACT &amp; OPPORTUNITIES ]</span>
+<span class="h-px bg-hairline-dark flex-1"></span>
+</div>
+<p class="text-xs sm:text-sm font-mono tracking-meta uppercase text-lime mb-6">Have an opportunity, idea or conversation in mind?</p>
+<div class="mb-10 md:mb-14">
+<h2 class="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-heading font-bold uppercase tracking-tightest leading-[0.95] max-w-6xl">
+LET'S MAKE <em>SOMETHING USEFUL</em>.
+</h2>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 pb-16 border-b border-hairline-dark">
+<!-- Get in Touch + Form -->
+<div class="lg:col-span-7">
+<span class="block text-[11px] font-bold tracking-meta uppercase text-lime mb-3">GET IN TOUCH</span>
+<p class="text-sm md:text-base text-paper/70 max-w-md font-normal leading-relaxed mb-8">
+Feel free to reach out for internships, collaborations, or to discuss a project — I'll get back to you as soon as I can.
+</p>
+<form action="{{ url_for('contact') }}" class="space-y-6" method="POST">
+{% if request.args.get('sent') %}
+<p class="text-sm font-bold tracking-meta uppercase text-lime border border-lime/40 bg-lime/10 px-4 py-3">Thanks — your message has been received. I'll get back to you soon.</p>
+{% endif %}
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+<div class="">
+<label class="block text-[11px] font-bold tracking-meta uppercase text-muted-dark mb-2" for="first_name">First Name *</label>
+<input class="w-full bg-transparent border-b border-hairline-dark py-2 text-sm text-paper placeholder:text-muted-dark focus:outline-none focus:border-lime transition-colors" id="first_name" name="first_name" required="" type="text"/>
+</div>
+<div class="">
+<label class="block text-[11px] font-bold tracking-meta uppercase text-muted-dark mb-2" for="last_name">Last Name *</label>
+<input class="w-full bg-transparent border-b border-hairline-dark py-2 text-sm text-paper placeholder:text-muted-dark focus:outline-none focus:border-lime transition-colors" id="last_name" name="last_name" required="" type="text"/>
+</div>
+</div>
+<div class="">
+<label class="block text-[11px] font-bold tracking-meta uppercase text-muted-dark mb-2" for="email">Email *</label>
+<input class="w-full bg-transparent border-b border-hairline-dark py-2 text-sm text-paper placeholder:text-muted-dark focus:outline-none focus:border-lime transition-colors" id="email" name="email" required="" type="email"/>
+</div>
+<div class="">
+<label class="block text-[11px] font-bold tracking-meta uppercase text-muted-dark mb-2" for="phone">Phone</label>
+<input class="w-full bg-transparent border-b border-hairline-dark py-2 text-sm text-paper placeholder:text-muted-dark focus:outline-none focus:border-lime transition-colors" id="phone" name="phone" type="tel"/>
+</div>
+<div class="">
+<label class="block text-[11px] font-bold tracking-meta uppercase text-muted-dark mb-2" for="message">Message</label>
+<textarea class="w-full bg-transparent border-b border-hairline-dark py-2 text-sm text-paper placeholder:text-muted-dark focus:outline-none focus:border-lime transition-colors resize-none" id="message" name="message" rows="4"></textarea>
+</div>
+<button class="w-full sm:w-auto px-8 py-4 bg-lime text-ink text-xs font-bold tracking-meta uppercase hover:bg-paper transition-all flex items-center justify-center gap-2 group" type="submit">
+<span class="">SEND</span>
+<span class="group-hover:translate-x-1 transition-transform">↗</span>
+</button>
+</form>
+</div>
+<!-- Quick Info -->
+<div class="lg:col-span-5 space-y-10 lg:pl-4 lg:border-l lg:border-hairline-dark">
+<div class="space-y-2">
+<span class="block text-[11px] font-bold tracking-meta uppercase text-muted-dark">EMAIL</span>
+<span class="inline-block font-heading text-base sm:text-lg font-bold text-paper">
+MUSKANSAHU3306@GMAIL.COM
+</span>
+</div>
+<div class="space-y-4">
+<span class="block text-[11px] font-bold tracking-meta uppercase text-muted-dark">CURRENT LOCATION &amp; STATUS</span>
+<p class="text-sm md:text-base text-paper/80 max-w-md font-normal leading-relaxed">
+BASED IN NAGPUR, INDIA. OPEN TO ENGINEERING INTERNSHIPS, JUNIOR DEVELOPER OPPORTUNITIES, AND MEANINGFUL SOFTWARE PROJECTS.
+</p>
+</div>
+<div class="space-y-4">
+<span class="block text-[11px] font-bold tracking-meta uppercase text-muted-dark">CONNECT &amp; REPOSITORIES</span>
+<div class="flex flex-wrap gap-x-8 gap-y-3 text-xs md:text-sm font-bold tracking-meta uppercase">
+<a class="hover:text-lime transition-colors" href="https://github.com/muskan-sahu336" rel="noopener noreferrer" target="_blank">GITHUB ↗</a>
+<a class="hover:text-lime transition-colors" href="https://www.linkedin.com/in/muskansahu336/" rel="noopener noreferrer" target="_blank">LINKEDIN ↗</a>
+</div>
+</div>
+</div>
+</div>
+<div class="pt-8 flex flex-col md:flex-row items-start md:items-center justify-between text-[11px] text-muted-dark font-mono uppercase tracking-wider gap-4">
+<div class="">
+© 2026 MUSKAN SAHU. ALL RIGHTS RESERVED.
+</div>
+<div class="">
+BUILT WITH CURIOSITY. TYPESET IN SPACE GROTESK &amp; DM SANS.
+</div>
+</div></div>
+</footer>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
